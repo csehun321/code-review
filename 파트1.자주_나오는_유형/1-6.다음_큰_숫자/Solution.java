@@ -2,7 +2,7 @@ public class Solution {
     private int numOfOne(final int n) {
         int num = n;
         int numOfOne = 0;
-        while(num > 0) {
+        while (num > 0) {
             if (num % 2 == 1) {
                 numOfOne++;
             }
@@ -15,8 +15,9 @@ public class Solution {
         int answer = 0;
         int startNum = n + 1;
 
-        while(true) {
-            if (numOfOne(n) == numOfOne(startNum)) {
+        int currentNum = numOfOne(n);
+        while (true) {
+            if (currentNum == numOfOne(startNum)) {
                 answer = startNum;
                 break;
             }
