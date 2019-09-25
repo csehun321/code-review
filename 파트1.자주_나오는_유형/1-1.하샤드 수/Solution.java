@@ -9,12 +9,9 @@ class Solution {
         num = num / 10;
       }
       
-      if(x % sum == 0){
-          return answer;
+      if(x % sum != 0){
+          answer = false;
       }
-      else{
-          return false;
-      }
-      
+      return answer;
      }
 }
