@@ -1,4 +1,5 @@
-class Solution {
-
-bool solution(int x) {
+public class Solution {
+    public bool solution(int x) {
+      return false
+    }
 }
