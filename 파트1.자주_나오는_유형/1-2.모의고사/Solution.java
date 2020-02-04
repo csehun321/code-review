@@ -13,7 +13,7 @@ class Solution {
         return getMostCorrectStudent(correctArray);
     }
 
-    public int getCorrectCount(int[] pattern,int[] answers){
+    private int getCorrectCount(int[] pattern,int[] answers){
         int patternCnt = 0;
         int correct = 0;
 
@@ -29,7 +29,7 @@ class Solution {
         return correct;
     }
 
-    public int[] getMostCorrectStudent(int[] correctArray){
+    private int[] getMostCorrectStudent(int[] correctArray){
         int[] winList = new int[3];
         int winListCount = 0;
 
@@ -51,7 +51,7 @@ class Solution {
         return answer;
     }
 
-    public int getBestScore(int[] correctArray){
+    private int getBestScore(int[] correctArray){
         int bestScore = correctArray[0];
 
         for(int i = 0; i < 3; i++){
