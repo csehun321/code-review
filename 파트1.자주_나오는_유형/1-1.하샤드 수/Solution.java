@@ -1,5 +1,6 @@
 public class Solution {
     public bool solution(int x) {
-      return false
+        System.out.println("테스트");
+        return false
     }
 }
