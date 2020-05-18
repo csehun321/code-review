@@ -9,10 +9,11 @@ class Solution {
             if(s.charAt(i) == '('){
                 stack.push(s.charAt(i));
             }else{
-                if(!stack.isEmpty() && stack.peek()=='('){
+                if(!stack.isEmpty()){
                     stack.pop();
                 }else{
                     answer = false;
+                    break;
                 }
             }
         }
