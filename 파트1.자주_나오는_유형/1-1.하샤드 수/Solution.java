@@ -1,15 +1,26 @@
 class Solution {
     public boolean solution(int x) {
-        String temp = Integer.toString(x);
-        int[] digits = new int[temp.length()];
-        
-        int sum = 0;
-        
-        for (int i = 0; i < temp.length(); i++){
-            digits[i] = temp.charAt(i) - '0';
-            sum += digits[i];
+        int num = 0;
+        if(x<10){
+            return true;
         }
-        
-        return x%sum==0;
+        else if(x>=10 && x<100){
+            num = x/10 + x%10;
+            if (x%num==0)
+                return true;
+        }
+        else if(x>=100 && x<1000){
+            num = x/100 + (x%100)/10 + (x%100)%10;
+            if (x%num==0)
+                return true;
+        }
+        else if(x>=1000 && x<10000){
+            num = x/1000 + (x%1000)/100 + ((x%1000)%100)/10 + ((x%1000)%100)%10;
+            if (x%num==0)
+                return true;
+        }
+        else
+            return true;
+        return false;
     }
 }
