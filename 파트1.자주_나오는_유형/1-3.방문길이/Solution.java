@@ -5,7 +5,6 @@ class Solution {
         int y = 0;
 
         int[][] map = new int[21][21];
-        map[10][10] = 1;
 
         int length = dirs.length();
 
