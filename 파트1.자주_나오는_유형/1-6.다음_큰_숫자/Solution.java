@@ -1,14 +1,11 @@
 class Solution {
     public int solution(int n) {
         int one = 0;
-
         one = CountOne(n);
-        while(true){
-            ++n;
-            if(one==CountOne(n)){
-                return n;
-            }
+        while(one!=CountOne(n+1)) {
+            n++;
         }
+        return n+1;
     }
 
     private int CountOne(int num) {
@@ -16,7 +13,7 @@ class Solution {
         int divided = 0;
 
         while(num != 0){
-            divided = num % 2;
+            divided = num & 1;
             num = num >> 1;
             if(divided == 1) {
                 one++;
