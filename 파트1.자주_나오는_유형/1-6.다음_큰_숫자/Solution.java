@@ -10,9 +10,8 @@ class Solution {
 
     private int CountOne(int num) {
         int one = 0;
-        int divided = 0;
-
         while(num != 0){
+            int divided;
             divided = num & 1;
             num = num >> 1;
             if(divided == 1) {
